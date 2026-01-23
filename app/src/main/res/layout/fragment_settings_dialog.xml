@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Текстовое поле с почтой пользователя -->
+    <TextView
+        android:id="@+id/tv_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Email"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <!-- Информация о создателе -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Выполнил студент группы: \nИКБО-12-22 Коровин Кирилл Константинович"
+        android:textSize="16sp" />
+
+    <!-- Кнопка для выхода из аккаунта -->
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Выйти из аккаунта"
+        android:textAllCaps="false"
+        android:textColor="#F10303"
+        android:textSize="16sp" />
+</LinearLayout>

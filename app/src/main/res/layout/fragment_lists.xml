@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listsFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="8dp">
+
+    <!-- Заголовок "Ваши списки" -->
+    <TextView
+        android:id="@+id/tvYourLists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="Ваши списки"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Кнопка «+ Create List» (создать новый список) -->
+    <Button
+        android:id="@+id/btnCreateList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="+ Создать список"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Кнопка "Sort" - для переключения сортировки -->
+    <Button
+        android:id="@+id/btnSortLists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сортировать"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!-- RecyclerView со списками -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLists"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSortLists" />
+</androidx.constraintlayout.widget.ConstraintLayout>
